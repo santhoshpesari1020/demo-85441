@@ -17,7 +17,23 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
-
+	
+  <dependencyManagement>
+	<dependencies>
+            <dependency>
+                <groupId>com.citrix.test.aqaservice.client</groupId>
+                <artifactId>AQAServiceClient</artifactId>
+                <version>1.0.1</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.fasterxml.jackson.core</groupId>
+                        <artifactId>jackson-core</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+	</dependencies>
+   </dependencyManagement>
+	
 	<build>
 		<plugins>
 			<plugin>
